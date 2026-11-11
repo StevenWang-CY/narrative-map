@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hello styles · Narrative Map</title>
+    <link rel="icon" href="../mark.svg" />
+    <link rel="stylesheet" href="../styles.css?v=projects-4" />
+    <link rel="stylesheet" href="mentor.css" />
+    <script src="../icons.js" defer></script>
+    <script src="style-inventory.js" defer></script>
+    <script src="styles.js" defer></script>
+  </head>
+  <body class="review-page">
+    <a class="skip-link" href="#main">Skip to style specimen</a>
+    <header class="review-header">
+      <a class="review-brand" href="index.html"
+        ><img src="../mark.svg" alt="" width="28" height="28" />Narrative Map</a
+      ><a href="index.html#R2">Back to requirements</a>
+    </header>
+    <main id="main" class="review-main">
+      <section class="review-hero">
+        <p class="review-kicker">R2 · Production style specimen</p>
+        <h1>Hello styles</h1>
+        <p class="review-lead">
+          The same type, colors, icons, and controls used in the presentation
+          studio.
+        </p>
+      </section>
+      <section class="review-section">
+        <div class="section-heading">
+          <h2>Typography</h2>
+          <p id="font-stack"></p>
+        </div>
+        <div id="font-weights"></div>
+        <div class="type-sample" style="margin-top: 16px">
+          <h1>Page heading</h1>
+          <small>Product heading</small>
+        </div>
+        <div class="type-sample">
+          <h2>Panel heading</h2>
+          <small>Product panel title</small>
+        </div>
+        <div class="type-sample">
+          <span class="num" style="font-size: 28px">01:30 / 10:00</span
+          ><small>Tabular timing figures</small>
+        </div>
+      </section>
+      <section class="review-section">
+        <div class="section-heading">
+          <h2>Semantic palette</h2>
+          <p>
+            Surface, text, action, warning, and success colors come from the
+            production CSS variables.
+          </p>
+        </div>
+        <div id="semantic-colors" class="spec-grid"></div>
+      </section>
+      <section class="review-section">
+        <div class="section-heading">
+          <h2>Speaker palettes</h2>
+          <p>
+            All six choices, each with an accent, background, and text color.
+            Speaker names remain visible alongside color.
+          </p>
+        </div>
+        <div id="speaker-colors" class="spec-grid"></div>
+      </section>
+      <section class="review-section">
+        <div class="section-heading">
+          <h2>Icons and product mark</h2>
+          <p id="icon-count">Every icon in the shared production set.</p>
+        </div>
+        <div id="icon-grid" class="spec-icons"></div>
+      </section>
+      <section class="review-section">
+        <div class="section-heading">
+          <h2>Controls and feedback</h2>
+          <p>
+            Hover or press a button. Use Tab to inspect keyboard focus. Try
+            valid and invalid durations.
+          </p>
+        </div>
+        <div class="spec-controls">
+          <div class="review-actions" style="margin-top: 0">
+            <button class="btn primary" data-spec="Primary">
+              Primary action</button
+            ><button class="btn" data-spec="Secondary">Secondary action</button
+            ><button class="btn ghost" data-spec="Quiet">Quiet action</button
+            ><button class="btn danger" data-spec="Destructive">
+              Destructive action</button
+            ><button class="btn" disabled>Disabled</button>
+          </div>
+          <p id="control-feedback" class="spec-status" role="status">
+            Controls are interactive examples; they do not edit a plan.
+          </p>
+          <div class="review-actions">
+            <span class="badge good">✓ Ready to rehearse</span
+            ><span class="badge warn">Draft</span
+            ><span class="badge neutral">Optional</span>
+          </div>
+          <form id="style-form">
+            <div class="field">
+              <label class="field-label" for="style-duration"
+                >Rehearsed duration</label
+              ><input
+                id="style-duration"
+                name="duration"
+                value="1:30"
+                aria-describedby="style-error style-help"
+              />
+              <p id="style-help" class="field-help">
+                Minutes:seconds. Try 1:60, then 1:30.
+              </p>
+              <p id="style-error" class="form-error" role="alert" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="style-speaker">Speaker</label
+              ><select id="style-speaker">
+                <option>Alex</option>
+                <option>Priya</option>
+                <option>Leo</option>
+              </select>
+            </div>
+            <label class="spec-check"
+              ><input type="checkbox" checked />Include this block in the
+              talk</label
+            ><button class="btn primary" type="submit" style="margin-top: 20px">
+              Check duration
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="review-section">
+        <details class="review-details">
+          <summary>Complete supplementary color inventory</summary>
+          <p>
+            All literal color values present in the product stylesheet,
+            including borders, hover states, focus, and translucent shadows.
+            This complements the semantic and speaker palettes above.
+          </p>
+          <div id="all-colors" class="spec-grid" style="margin-top: 20px"></div>
+        </details>
+      </section>
+    </main>
+    <footer class="review-footer">
+      <p>
+        Uses the production stylesheet and shared icon source. This page is a
+        technical demonstration, not a user-research result.
+      </p>
+      <a href="index.html">Review hub</a>
+    </footer>
+    <script src="../model.js?v=projects-4"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta
+      name="description"
+      content="Plan a timed presentation without losing the thread. Rehearse, check prerequisites, and compare alternative speaking plans."
+    />
+    <title>Narrative Map — Presentation studio</title>
+    <link rel="icon" type="image/svg+xml" href="mark.svg" />
+    <link rel="stylesheet" href="styles.css?v=projects-4" />
+    <script src="model.js?v=projects-4" defer></script>
+    <script src="icons.js" defer></script>
+    <script src="app.js?v=projects-4" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to speaking plan</a>
+    <div id="app"></div>
+    <div
+      id="announcer"
+      class="sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <dialog id="modal" aria-labelledby="modal-title"></dialog>
+    <input
+      type="file"
+      id="import-file"
+      accept=".json,application/json"
+      hidden
+    />
+    <noscript
+      ><main class="no-js">
+        <h1>Narrative Map</h1>
+        <p>Enable JavaScript to edit your presentation plan and rehearse.</p>
+      </main></noscript
+    >
+  </body>
+</html>
